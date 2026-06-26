@@ -1,0 +1,6 @@
+python GraspGraphNet_v1/validate_gso_cmap_traj.py \
+  --ckpt GraspGraphNet_v1/logs/v7_fixed_limits_rot05/epoch_0164.pt \
+  --ode_steps 10 --seed 0
+
+
+python GraspGraphNet_v1/visualize_isaac_traj.py   --result GraspGraphNet_v1/validate_output/v7_fixed_limits_rot05_ep164_gso_cmap_traj_steps10_seed0/results.pt   --use_texture
