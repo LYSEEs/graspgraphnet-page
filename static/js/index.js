@@ -119,6 +119,19 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
+function setupHeroVideoAutoplay() {
+    const heroVideo = document.querySelector('.hero-video');
+    if (!heroVideo) return;
+
+    heroVideo.muted = true;
+    heroVideo.play().catch(e => {
+        console.log('Hero video autoplay prevented:', e);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupHeroVideoAutoplay);
+
+if (window.$ && window.bulmaCarousel && window.bulmaSlider) {
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
 
@@ -140,3 +153,4 @@ $(document).ready(function() {
     setupVideoCarouselAutoplay();
 
 })
+}
